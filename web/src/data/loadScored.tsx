@@ -16,7 +16,7 @@ import {
 } from "react";
 import { assertDecomposition, type ScoredPayload, type Work } from "../types/scored";
 
-const SCORED_URL = "/scored.json";
+const SCORED_URL = `${import.meta.env.BASE_URL}scored.json`;
 
 type State =
   | { status: "loading" }
@@ -87,7 +87,7 @@ export function useScored(): ScoredPayload {
  * Detail is a separate 11 MB file so the dashboard is not made to wait for it,
  * and it is fetched once and cached for the session.
  */
-const DETAIL_URL = "/work_details.json";
+const DETAIL_URL = `${import.meta.env.BASE_URL}work_details.json`;
 let detailCache: Record<string, Work> | null = null;
 let detailPromise: Promise<Record<string, Work>> | null = null;
 
