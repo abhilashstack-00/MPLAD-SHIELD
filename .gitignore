@@ -1,0 +1,21 @@
+# Never commit real registers or anything derived from them (AGENTS.md 2.7)
+/data/
+*.csv
+outputs/
+web/public/scored.json
+web/public/work_details.json
+.env
+.env.*
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Node
+node_modules/
+dist/
+build/
